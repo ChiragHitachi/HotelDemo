@@ -1,0 +1,24 @@
+﻿<div class="jumbotron">
+    <h1>Type Script Hotel Reviews</h1>
+    <p class="lead">Home away from home!</p>
+</div>
+<form class="form-horizontal" role="form">
+    <div ng-app="mvcapp">
+        <div class="row" ng-controller="hotelReviewController as vm">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+            </div>
+            <div class="col-md-4">
+                <div hotel-dropdown id="review" selected-hotel="vm.selectedHotel" on-change="vm.onHotelSelect(hotelId)"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div hotel-reviews-view reviews="vm.reviews" hotel="vm.selectedHotel"></div>
+            </div>
+            <div class="col-md-8" ng-hide="vm.showReviews">
+                No reviews found. Be the first one to review!
+            </div>
+        </div>
+    </div>
+</form>
