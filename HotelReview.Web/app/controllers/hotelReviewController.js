@@ -32,3 +32,4 @@ var mvcapp;
     mvcapp.hotelReviewController = hotelReviewController;
     angular.module('mvcapp').controller('hotelReviewController', hotelReviewController);
 })(mvcapp || (mvcapp = {}));
+//# sourceMappingURL=hotelReviewController.js.map

@@ -32,3 +32,4 @@ var mvcapp;
     }());
     mvcapp.sGridDirectiveController = sGridDirectiveController;
 })(mvcapp || (mvcapp = {}));
+//# sourceMappingURL=gridDirective.js.map

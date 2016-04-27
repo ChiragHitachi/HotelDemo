@@ -189,7 +189,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
-    <Compile Include="Controllers\HotelDataController.cs" />
     <Compile Include="Controllers\HotelReviewController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,8 +197,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controllers\HotelData.js" />
-    <None Include="Views\HotelData\HotelData.cshtml" />
     <Content Include="app\views\hotelDropdownDirective.html" />
     <Content Include="app\views\hotelReviewDirective.html" />
     <Content Include="app\views\hotelReviewsViewDirective.html" />

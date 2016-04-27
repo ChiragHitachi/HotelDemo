@@ -2,8 +2,8 @@ var mvcapp;
 (function (mvcapp) {
     'use strict';
     angular.module('mvcapp').directive('hotelDropdown', hotelDropdownDirective);
-    var scripts = document.getElementsByTagName("script");
-    var currentScriptPath = scripts[scripts.length - 1].src;
+    //var scripts = document.getElementsByTagName("script")
+    //var currentScriptPath = scripts[scripts.length - 1].src;
     function hotelDropdownDirective() {
         var directive = {
             restrict: 'EA',
@@ -35,3 +35,4 @@ var mvcapp;
     }());
     mvcapp.hotelDropdownDirectiveController = hotelDropdownDirectiveController;
 })(mvcapp || (mvcapp = {}));
+//# sourceMappingURL=hotelDropdownDirective.js.map

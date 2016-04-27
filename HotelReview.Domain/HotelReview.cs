@@ -21,9 +21,5 @@ namespace TypeScriptDemo.Domain
         public DateTime ReviewDate { get; set; }
     }
 
-    public class Review
-    {
-        public int ID { set; get; }
-        public string review { set; get; }
-    }
+   
 }

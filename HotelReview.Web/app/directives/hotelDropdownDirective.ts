@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('mvcapp').directive('hotelDropdown', hotelDropdownDirective);
-    var scripts = document.getElementsByTagName("script")
-    var currentScriptPath = scripts[scripts.length - 1].src;
+    //var scripts = document.getElementsByTagName("script")
+    //var currentScriptPath = scripts[scripts.length - 1].src;
 
     function hotelDropdownDirective(): ng.IDirective {
         var directive = <ng.IDirective>{

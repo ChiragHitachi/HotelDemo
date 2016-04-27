@@ -12,3 +12,4 @@ var mvcapp;
         return directive;
     }
 })(mvcapp || (mvcapp = {}));
+//# sourceMappingURL=hotelReviewsViewDirective.js.map
