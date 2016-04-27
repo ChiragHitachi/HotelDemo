@@ -39,7 +39,11 @@ namespace TypeScriptDemo.Domain
                 new HotelReview() { HotelId = 3, ReviewId = 19, ReviewerName = "Suraj" , Comments = "Spacious room, good food", Rating = Rating.Good, ReviewDate = DateTime.Now.AddDays(-34) },
                 new HotelReview() { HotelId = 3, ReviewId = 20, ReviewerName = "Rajesh" , Comments = "Average food, Clean room", Rating = Rating.Average, ReviewDate = DateTime.Now.AddDays(-44) },
                 new HotelReview() { HotelId = 3, ReviewId = 21, ReviewerName = "Mukesh" , Comments = "Filthy room, Poor service", Rating = Rating.Bad, ReviewDate = DateTime.Now.AddDays(-54) }
-         };
+         
+             new HotelReview() { HotelId = 5,  ReviewId = 22, ReviewerName =  "Chirag" , Comments = "Comfortable stay", Rating = Rating.Good, ReviewDate = DateTime.Now.AddDays(-4) },
+              
+            
+        };
 
         public  static IList<Hotel> GetHotels()
         {
