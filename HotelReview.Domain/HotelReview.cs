@@ -20,6 +20,4 @@ namespace TypeScriptDemo.Domain
 
         public DateTime ReviewDate { get; set; }
     }
-
-   
 }
