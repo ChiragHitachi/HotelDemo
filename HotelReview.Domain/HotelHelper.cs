@@ -13,8 +13,8 @@ namespace TypeScriptDemo.Domain
               new Hotel(){ HotelId = 1, Name = "Taj", City = "Pune"},
               new Hotel(){ HotelId = 2, Name = "Hyatt", City = "Pune"},
               new Hotel(){ HotelId = 3, Name = "Barbossa", City = "Pune"},
-              new Hotel(){ HotelId = 4, Name = "Orchid", City = "Pune"}
-               new Hotel(){ HotelId = 5, Name = "test", City = "Pune"}
+              new Hotel(){ HotelId = 4, Name = "Orchid", City = "Pune"},
+               new Hotel(){ HotelId = 5, Name = "Hilton", City = "Pune"}
           };
 
         static IList<HotelReview> HotelReviews = new List<HotelReview> {
