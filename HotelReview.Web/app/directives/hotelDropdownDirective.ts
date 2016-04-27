@@ -12,7 +12,6 @@
                 id: "@?",
                 onChange: "&",
                 selectedHotel: "=",
-          
             },
             //templateUrl: currentScriptPath.substring(0, currentScriptPath.lastIndexOf('/') + 1) +
             templateUrl: '/app/views/hotelDropdownDirective.html',

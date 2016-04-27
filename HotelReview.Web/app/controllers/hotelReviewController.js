@@ -1,19 +1,22 @@
 var mvcapp;
 (function (mvcapp) {
     var hotelReviewController = (function () {
-        function hotelReviewController(hotelService, $scope) {
+        function hotelReviewController(hotelService, $scope, $interval) {
             var vm = this;
             vm.onHotelSelect = function (hotelId) {
                 debugger;
                 if (hotelId > 0) {
                     hotelService.getHotelReviews(hotelId).then(function (data) {
-                        $scope.$applyAsync();
                         vm.reviews = data;
                         vm.showReviews = true;
                         debugger;
-                        //$scope.$apply((function () {
-                        //    vm.reviews = data; vm.showReviews = true;
-                        //}));
+                        //$interval(() => {
+                        //    $scope.$applyAsync(($scope) => {
+                        //        vm.reviews = data;
+                        //        vm.showReviews = true;
+                        //        debugger;
+                        //    });
+                        //}, 100, 1);
                     });
                 }
             };
@@ -23,10 +26,9 @@ var mvcapp;
             //    }
             //});
         }
-        hotelReviewController.$inject = ['hotelService', '$scope'];
+        hotelReviewController.$inject = ['hotelService', '$scope', '$interval'];
         return hotelReviewController;
     }());
     mvcapp.hotelReviewController = hotelReviewController;
     angular.module('mvcapp').controller('hotelReviewController', hotelReviewController);
 })(mvcapp || (mvcapp = {}));
-//# sourceMappingURL=hotelReviewController.js.map

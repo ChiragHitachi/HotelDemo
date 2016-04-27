@@ -34,4 +34,3 @@ var mvcapp;
     }
     angular.module('mvcapp').factory('webRequest', factory);
 })(mvcapp || (mvcapp = {}));
-//# sourceMappingURL=webRequest.js.map

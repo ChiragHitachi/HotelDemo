@@ -27,6 +27,7 @@ namespace HotelReview.Web
                 "~/app/startup.js",
                     "~/app/services/webRequest.js",
                     "~/app/services/hotelService.js",
+                    "~/app/controllers/HotalData.js",
                      "~/app/controllers/hotelReviewController.js",
                      "~/app/directives/hotelDropdownDirective.js",
                       "~/app/directives/hotelReviewsViewDirective.js",

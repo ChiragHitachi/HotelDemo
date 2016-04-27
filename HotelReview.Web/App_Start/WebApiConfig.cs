@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace HotelReview.Web
@@ -10,7 +13,10 @@ namespace HotelReview.Web
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            //HttpConfiguration config = new HttpConfiguration();
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            jsonFormatter.SerializerSettings.Formatting = Formatting.Indented;
             // Web API routes
             config.MapHttpAttributeRoutes();
 

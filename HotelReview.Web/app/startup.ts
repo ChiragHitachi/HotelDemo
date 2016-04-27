@@ -5,22 +5,22 @@ module mvcapp {
     //var mvcapp = 
 
     export interface Hotel {
-        HotelId: number;
-        Name: string;
-        AddressLine1: string;
-        AddressLine2: string;
-        City: string;
-        State: string;
-        Pincode: number;
-        ContactNumber: string;
+        hotelId: number;
+        name: string;
+        addressLine1: string;
+        addressLine2: string;
+        city: string;
+        state: string;
+        pincode: number;
+        contactNumber: string;
     }
 
     export interface HotelReview {
-        ReviewId: number;
-        HotelId: number;
-        ReviewerName: string;
-        Rating: number;
-        Commemts: string;
-        ReviewDate: Date;
+        reviewId: number;
+        hotelId: number;
+        reviewerName: string;
+        rating: number;
+        commemts: string;
+        reviewDate: Date;
     }
 }

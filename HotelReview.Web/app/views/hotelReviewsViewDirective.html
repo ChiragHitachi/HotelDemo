@@ -1,24 +1,27 @@
-﻿Reviews - {{vm.selectedHotel.Name}}
-<div ng-repeat="review in vm.reviews track by review.ReviewId">
-    <table border="1">
+﻿Reviews - {{vm.selectedHotel.name}}
+<div ng-repeat="review in vm.reviews track by review.reviewId">
+    <table border="1" width="50%">
         <tbody>
             <tr>
                 <td>
                     <div class="row">
                         <div class="col-sm-5">
-                            Name : <label>{{review.ReviewerName}}</label>
+                            Name : <label>{{review.reviewerName}}</label>
                         </div>
                         <div class="col-sm-5">
-                            Rating : <label>{{review.Rating}}</label>
+                            Rating : <label>{{review.rating}}</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-10">
-                            Comments : <label>{{review.Comments}}</label>
+                            Comments : <label>{{review.comments}}</label>
                         </div>
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
+</div>
+<div class="col-md-8" ng-hide="vm.showReviews">
+    No reviews found. Be the first one to review!
 </div>

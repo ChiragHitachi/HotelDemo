@@ -16,4 +16,3 @@ var mvcapp;
     }());
     angular.module('mvcapp').service('hotelService', HotelService);
 })(mvcapp || (mvcapp = {}));
-//# sourceMappingURL=hotelService.js.map

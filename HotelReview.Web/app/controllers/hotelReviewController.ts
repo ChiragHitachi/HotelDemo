@@ -5,23 +5,25 @@
         reviews: HotelReview[];
         onHotelSelect: (hotelId: number) => void;
         showReviews: boolean;
-        static $inject = ['hotelService', '$scope'];
+        static $inject = ['hotelService', '$scope', '$interval'];
 
-        constructor(hotelService: IHotelService, $scope: ng.IScope) {
+        constructor(hotelService: IHotelService, $scope: ng.IScope, $interval : ng.IIntervalService) {
             var vm = this;
 
             vm.onHotelSelect = (hotelId: number) => {
                 debugger;
                 if (hotelId > 0) {
                     hotelService.getHotelReviews(hotelId).then((data) => {
-                        $scope.$applyAsync();
                         vm.reviews = data;
                         vm.showReviews = true;
                         debugger;
-
-                        //$scope.$apply((function () {
-                        //    vm.reviews = data; vm.showReviews = true;
-                        //}));
+                        //$interval(() => {
+                        //    $scope.$applyAsync(($scope) => {
+                        //        vm.reviews = data;
+                        //        vm.showReviews = true;
+                        //        debugger;
+                        //    });
+                        //}, 100, 1);
                     });
                 }
             };

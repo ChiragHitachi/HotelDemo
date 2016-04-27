@@ -35,4 +35,3 @@ var mvcapp;
     }());
     mvcapp.hotelDropdownDirectiveController = hotelDropdownDirectiveController;
 })(mvcapp || (mvcapp = {}));
-//# sourceMappingURL=hotelDropdownDirective.js.map

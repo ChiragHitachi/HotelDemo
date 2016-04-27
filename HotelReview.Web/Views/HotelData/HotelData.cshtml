@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "HotelData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HotelData</h2>
+
+
+<script src="~/app/controllers/HotelData.js"></script>
+
+<script src="~/Scripts/angular.js"></script>
+
+<div ng-app="HotelData" ng-controller="HotelDataController">
+    <table>
+        <tr>
+            <td>Hotel Name:</td>
+
+            <td> <select ng-model="ddlname" ng-options="hotel.name for hotel in hotels" ng-change="getcall()"></select>
+
+            <td></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Review</td>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    <li ng-model="review" ng-repeat="reviewdata in getcallresult">
+                        <p>{{reviewdata}}</p>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+
+
+    </table>
+</div>
+<script>
+
+</script>
+
+
+
+

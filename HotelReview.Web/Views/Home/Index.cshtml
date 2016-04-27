@@ -2,23 +2,51 @@
     <h1>Type Script Hotel Reviews</h1>
     <p class="lead">Home away from home!</p>
 </div>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/app/controllers/HotelData.js"></script>
+
+
 <form class="form-horizontal" role="form">
     <div ng-app="mvcapp">
-        <div class="row" ng-controller="hotelReviewController as vm">
-            <div class="col-md-4">
-                <h2>Getting started</h2>
+        <div ng-controller="hotelReviewController as vm">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Getting started</h2>
+                </div>
+                <div class="col-md-4">
+                    <div hotel-dropdown id="review" selected-hotel="vm.selectedHotel" on-change="vm.onHotelSelect(hotelId)"></div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div hotel-dropdown id="review" selected-hotel="vm.selectedHotel" on-change="vm.onHotelSelect(hotelId)"></div>
+            <div class="row">
+                <div class="col-md-8" ng-show="vm.showReviews">
+                    <div hotel-reviews-view reviews="vm.reviews" selected-hotel="vm.selectedHotel"></div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-8">
-                <div hotel-reviews-view reviews="vm.reviews" hotel="vm.selectedHotel"></div>
-            </div>
-            <div class="col-md-8" ng-hide="vm.showReviews">
-                No reviews found. Be the first one to review!
-            </div>
+
+
+        <div  ng-controller="hotelDataController">
+            <table>
+                <tr>
+                    <td>Hotel Name:</td>
+                    <td> <select ng-model="ddlname" ng-options="hotel.name for hotel in hotels" ng-change="getcall()"></select>
+                    <td></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Review</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li ng-model="review" ng-repeat="reviewdata in getcallresult">
+                                <p>{{reviewdata}}</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </form>
